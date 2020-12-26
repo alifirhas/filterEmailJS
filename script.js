@@ -11,7 +11,7 @@ function filterEmail(email) {
 
         //buang titik dari local
         if (local.includes(".")) {
-            local = local.replace(".", "");
+            local = local.split(".").join("");
         }
         //ambil kata dari local sebelum tanda + yang pertama
         if (local.includes("+")) {
