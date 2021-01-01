@@ -42,7 +42,18 @@
 
     <!-- tempat mengetik email -->
     <textarea name="email" id="email" cols="100" rows="10" class="form-control"
-      oninput="myFunction()">poli.teknik+pendaftaran@polije.ac.id, politeknik+pengumpulan+tugas@polije.ac.id, hubungan.masyarakat@polije.ac.id, hubungan.masyarakat@poli+je.ac.id</textarea>
+      oninput="myFunction()">alif.irhas@gmail.com, 
+      alif+irhas@yahoo.com,
+      alif.irhas.ikan@gmail.com,
+      alif+irhas+makan@gmail.com,
+      alif.irhas+makan@gmail.com,
+      alif+irhas.makan@yahoo.com,
+      alif.irhas@g+mail.com, 
+      alif+irhas@yah+oo.com,
+      alif.irhas.ikan@gm+ail.com,
+      alif+irhas+makan@g+mail.com,
+      alif.irhas+makan@gm+ail.com,
+      alif+irhas.makan@yahoo.com</textarea>
 
     <p></p>
     <!-- tempat keluarnya penjelasan -->
@@ -50,6 +61,7 @@
     <ol id="iniEmail"></ol>
     <p>Email hanya akan dikirimkan ke <span id="keluaran"></span> email diatas</p>
     <p id="penjelasan"></p>
+    <p id="test"></p>
 
   </div>
 
@@ -57,15 +69,21 @@
     function myFunction() {
       var email = document.getElementById("email").value;//ambil email
       var dataEmail = filterEmail(email);//filter email
+      // var dataEmail = [1,1,5,3,3,6,2,2,3,5,6]
       var emailValid = uniqueData(dataEmail);//ambil email yang unique
 
       //tampilkan penjelasan
       var printEmailValid = "";
       for (let i = 0; i < emailValid.length; i++) {
-        printEmailValid += "<li>" + emailValid[i] + "</li>";
+        
+          printEmailValid += "<li>" + emailValid[i] + "</li>";
+        
+        // console.log(emailValid[i]+" "+i+" "+typeof emailValid[i]);
       }
       document.getElementById("iniEmail").innerHTML = printEmailValid;
       document.getElementById("keluaran").innerHTML = emailValid.length;
+      // document.getElementById("test").innerHTML = emailValid;
+
     }
   </script>
 </body>
